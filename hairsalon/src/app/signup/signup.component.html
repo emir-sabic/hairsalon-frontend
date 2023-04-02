@@ -1,3 +1,19 @@
+<header>
+  <div class="logo">
+    <img src="assets/images/logo.avif" alt="Our Logo">
+  </div>
+  <nav>
+    <ul>
+
+      <li><a href="#">Stylists</a></li>
+      <li><a [routerLink]="['/services']">Services</a></li>
+      <li><a [routerLink]="['/book']">Book Appointment</a></li>
+      <li><a [routerLink]="['/modelsignup']">Model Sign-up</a></li>
+      <li><a>About us</a></li>
+      <li><a [routerLink]="['/']" class="login-btn">Home</a></li>
+    </ul>
+  </nav>
+</header>
 <div class="container">
   <h1>Sign Up</h1>
   <form >
@@ -30,6 +46,6 @@
         <option value="other">Other</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [routerLink]="['/']">Submit</button>
   </form>
 </div>
