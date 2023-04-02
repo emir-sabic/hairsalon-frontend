@@ -1,15 +1,17 @@
 <header>
   <div class="logo">
-    <img src="assets/images/logo.avif" alt="Our Logo">
+    <a [routerLink]="['/']">
+    <img src="assets/images/logo.avif" alt="Our Logo" [routerLink]="['/']">
+    </a>
   </div>
   <nav>
     <ul>
       <li><a href="#">Stylists</a></li>
-      <li><a [routerLink]="['services']">Services</a></li>
-      <li><a [routerLink]="['book']">Book Appointment</a></li>
-      <li><a [routerLink]="['modelsignup']">Model Sign-up</a></li>
+      <li><a [routerLink]="['/services']">Services</a></li>
+      <li><a [routerLink]="['/book']">Book Appointment</a></li>
+      <li><a [routerLink]="['/modelsignup']">Model Sign-up</a></li>
       <li><a>About us</a></li>
-      <li><a [routerLink]="['login']" class="login-btn">Login</a></li>
+      <li><a [routerLink]="['/login']" class="login-btn">Login</a></li>
     </ul>
   </nav>
 </header>
@@ -22,7 +24,7 @@
 <div class="services-container" style="background-image: url('assets/images/barbershop.jpg');">
   <h2>Our Services</h2>
   <p>At our hair salon, we offer a wide range of services to help you look and feel your best. Our experienced stylists are trained to provide top-notch services, from haircuts and coloring to treatments and styling.</p>
-  <button class="learn-more-btn">Learn More</button>
+  <button class="learn-more-btn" [routerLink]="['/services']">Learn More</button>
 </div>
 
 <div style="background-image: url(assets/images/background1.webp); opacity: 0.8; height: 600px; background-size: cover;">
