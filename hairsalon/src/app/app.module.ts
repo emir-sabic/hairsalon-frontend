@@ -1,18 +1,26 @@
-git addimport { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginsingupComponent } from './loginsingup/loginsingup.component';
-import { SignupComponent } from './signup/signup.component';
+
+import { BookapointmentComponent } from './bookapointment/bookapointment.component'
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginsingupComponent } from './loginsingup/loginsingup.component';
+import { ModelsignupComponent } from './modelsignup/modelsignup.component';
+import { ServicesComponent } from './services/services.component';
+import { SignupComponent } from './signup/signup.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    BookapointmentComponent,
     LoginsingupComponent,
     SignupComponent,
-    HomepageComponent
+    HomepageComponent,
+    ModelsignupComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,3 +30,4 @@ import { HomepageComponent } from './homepage/homepage.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

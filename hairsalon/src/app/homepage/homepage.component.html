@@ -5,11 +5,11 @@
   <nav>
     <ul>
       <li><a href="#">Stylists</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Book Appointment</a></li>
-      <li><a href="#">Model Sign-up</a></li>
-      <li><a href="#">About us</a></li>
-      <li><a href="#" class="login-btn">Login</a></li>
+      <li><a [routerLink]="['services']">Services</a></li>
+      <li><a [routerLink]="['book']">Book Appointment</a></li>
+      <li><a [routerLink]="['modelsignup']">Model Sign-up</a></li>
+      <li><a>About us</a></li>
+      <li><a [routerLink]="['login']" class="login-btn">Login</a></li>
     </ul>
   </nav>
 </header>
@@ -35,7 +35,7 @@
         <h2>About us</h2>
         <h1>While today’s world is filled with numerous clip joints and fancy salons, our Hair Salon is building something better.</h1>
         <p>Since 1997, The Hair Salon has been helping to recapture this tradition. We’re filling a void in life that has as much to do with the restoration of men and women as it does with the business of haircutting.</p>
-        <button class="learn-more-btn">Learn More</button>      </div>
+        <button class="learn-more-btn">Learn More</button>    </div>
     </div>
   </div>
 </div>
