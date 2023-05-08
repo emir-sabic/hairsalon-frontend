@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { BookapointmentComponent } from './featuers/bookapointment/bookapointment.component'
-import { HomepageComponent } from './featuers/homepage/homepage.component';
-import { LoginsingupComponent } from './featuers/loginsingup/loginsingup.component';
-import { ModelsignupComponent } from './featuers/modelsignup/modelsignup.component';
-import { ServicesComponent } from './featuers/services/services.component';
-import { SignupComponent } from './featuers/signup/signup.component';
+import { BookapointmentComponent } from './features/bookapointment/bookapointment.component'
+import { HomepageComponent } from './features/homepage/homepage.component';
+import { LoginsingupComponent } from './features/loginsingup/loginsingup.component';
+import { ModelsignupComponent } from './features/modelsignup/modelsignup.component';
+import { ServicesComponent } from './features/services/services.component';
+import { SignupComponent } from './features/signup/signup.component';
 
 
 @NgModule({
