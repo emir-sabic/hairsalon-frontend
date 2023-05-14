@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {Appointment} from '../models/bookappointment.model';
+import {BookAppointment} from '../models/bookappointment.model';
 import {HttpClient} from '@angular/common/http';
-import {environment} from '../../environments/environment';
+import {environment} from '../../environments/environments';
+
 
 @Injectable()
 export class AppointmentService {
@@ -12,17 +13,19 @@ export class AppointmentService {
   constructor(private http: HttpClient) {
   }
 
-  getAppointment(appointmentid: number): Observable<Appointment[]> {
-    return this.http.get<Appointment[]>(`${this.baseUrl}/${appointmentId}/list`);
+  getAppointments(appointmentid: number): Observable<BookAppointment[]> {
+    return this.http.get<BookAppointment[]>(`${this.baseUrl}/${appointmentid}/list`);
   }
 
-  getAppointment(appointmentId: number): Observable<Appointment> {
-    return this.http.get<Appointment>(`${this.baseUrl}/${appointmentid}`);
+  getAppointment(appointmentid: number): Observable<BookAppointment> {
+    return this.http.get<BookAppointment>(`${this.baseUrl}/${appointmentid}`);
   }
 
-  createAppointment(appointment: Appointment): Observable<Appointment> {
-    return this.http.post<Appointment>(`${this.baseUrl}`, appointment);
+  createAppointment(appointment: BookAppointment): Observable<BookAppointment> {
+  console.log('Sending appointment data to backend:', appointment);
+      return this.http.post<BookAppointment>(`${this.baseUrl}/createappointment`, {appointment});
   }
+
   deleteAppointment(appointmentid: number): Observable<null> {
     this.http.delete(`${this.baseUrl}/${appointmentid}`);
     return of(null);

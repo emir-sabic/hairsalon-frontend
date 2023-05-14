@@ -1,8 +1,8 @@
-export interface Appointment{
-    id: long;
-    service: string;
-    name: string;
-    time: string;
-    email: string;
-    number: string;
+export interface BookAppointment{
+  name: string;
+  email: string;
+  date: string;
+  time: string;
+  stylist: string;
+  service: string;
 }
