@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -10,6 +12,8 @@ import { LoginsingupComponent } from './features/loginsingup/loginsingup.compone
 import { ModelsignupComponent } from './features/modelsignup/modelsignup.component';
 import { ServicesComponent } from './features/services/services.component';
 import { SignupComponent } from './features/signup/signup.component';
+
+import { AppointmentService } from './services//bookappointment.service';
 
 
 @NgModule({
@@ -24,9 +28,10 @@ import { SignupComponent } from './features/signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
