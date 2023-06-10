@@ -107,8 +107,9 @@ footer {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-top: 100px;
-
+  height: 400px;
 }
+
 
 .footer-content {
   display: flex;
@@ -140,6 +141,7 @@ footer {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 150px;
 }
 
 .newsletter button {
@@ -151,6 +153,7 @@ footer {
   cursor: pointer;
   margin-left: 10px;
   align-self: flex-start;
+
 }
 .social-icons {
   margin-top: 20px;
@@ -173,3 +176,8 @@ footer {
   text-align: center;
 }
 
+iframe {
+  width: 550px;
+  height: 100%;
+  border: none;
+}
