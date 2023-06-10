@@ -9,6 +9,7 @@ import { ServicesComponent } from './features/services/services.component';
 import { SignupComponent } from './features/signup/signup.component';
 import { AppointmentService } from './services/bookappointment.service';
 import { AboutusComponent } from './features/aboutus/aboutus.component';
+import { ReviewComponent } from './features/review/review.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
 {path:'modelsignup', component:ModelsignupComponent},
 {path:'signup', component:SignupComponent},
 {path:'bookapointment', component:BookapointmentComponent},
-{path:'aboutus', component:AboutusComponent}
+{path:'aboutus', component:AboutusComponent},
+{path:'review', component:ReviewComponent}
+
 ];
 
 @NgModule({
