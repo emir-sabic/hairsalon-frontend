@@ -12,7 +12,7 @@ import { LoginsingupComponent } from './features/loginsingup/loginsingup.compone
 import { ModelsignupComponent } from './features/modelsignup/modelsignup.component';
 import { ServicesComponent } from './features/services/services.component';
 import { SignupComponent } from './features/signup/signup.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
+import { AboutusComponent } from './features/aboutus/aboutus.component';
 
 import { AppointmentService } from './services//bookappointment.service';
 
@@ -26,7 +26,7 @@ import { AppointmentService } from './services//bookappointment.service';
     HomepageComponent,
     ModelsignupComponent,
     ServicesComponent,
-    AboutusComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
