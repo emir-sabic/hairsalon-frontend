@@ -10,6 +10,7 @@ import { LoginsingupComponent } from './features/loginsingup/loginsingup.compone
 import { ModelsignupComponent } from './features/modelsignup/modelsignup.component';
 import { ServicesComponent } from './features/services/services.component';
 import { SignupComponent } from './features/signup/signup.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { SignupComponent } from './features/signup/signup.component';
     HomepageComponent,
     ModelsignupComponent,
     ServicesComponent,
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,
