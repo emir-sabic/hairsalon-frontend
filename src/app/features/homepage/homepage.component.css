@@ -60,7 +60,6 @@ nav a:hover {
 }
 
 .motto {
-  background-color: #f2f2f2;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -70,17 +69,16 @@ nav a:hover {
 }
 
 .motto h2 {
-  font-size: 3rem;
+  font-size: 66px;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #333;
 }
 
 .motto p {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 20px;
   line-height: 1.5;
   max-width: 800px;
+  font-weight: bold;
 }
 
 .services-container {
@@ -116,6 +114,7 @@ nav a:hover {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .learn-more-btn:hover {
@@ -174,6 +173,7 @@ p {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
 }
 
 .learn-more-btn:hover {
@@ -209,55 +209,57 @@ p {
 }
 
 .review-btn {
-  background-color: #2e2e2e;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
   padding: 10px 20px;
   font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
 }
 
 .review-btn:hover {
-  background-color: #555555;
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.20);
 }
 
 .review-cta h2{
-font-size: 56px;
-padding: 0px;
-margin-bottom: 0px;
+  font-size: 56px;
+  padding: 0px;
+  margin-bottom: 0px;
 }
 
 .review-cta p {
-margin-top: 5px;
+  margin-top: 5px;
 }
 
 footer {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 80px;
-padding: 1rem;
-background-color: #333;
-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
 }
 
 .footer-content {
-text-align: center;
+  text-align: center;
 }
 
 .footer-content h3 {
-font-size: 1.2rem;
-margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-content p {
-margin: 0;
+  margin: 0;
 }
 
 .footer-content p span {
-margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 
