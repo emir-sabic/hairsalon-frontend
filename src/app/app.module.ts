@@ -16,6 +16,7 @@ import { AboutusComponent } from './features/aboutus/aboutus.component';
 
 import { AppointmentService } from './services//bookappointment.service';
 import { ReviewComponent } from './features/review/review.component';
+import { ReviewPopupComponent } from './review-popup/review-popup.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ReviewComponent } from './features/review/review.component';
     ModelsignupComponent,
     ServicesComponent,
     AboutusComponent,
-    ReviewComponent
+    ReviewComponent,
+    ReviewPopupComponent
   ],
   imports: [
     BrowserModule,
