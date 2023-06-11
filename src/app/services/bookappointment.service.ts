@@ -23,7 +23,7 @@ export class AppointmentService {
   }
 
   createAppointment(appointment: BookAppointment): Observable<BookAppointment> {
-  console.log('Sending appointment data to backend:', appointment);
+  console.log('Sending appointment data too backend:', appointment);
       return this.http.post<BookAppointment>(`${this.baseUrl}/bookapointment`, appointment);
   }
 
