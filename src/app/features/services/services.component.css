@@ -159,8 +159,8 @@ ul{
   margin-left: 35px;
 }
 .image img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100% auto;
+  max-height: 100% auto;
 }
 .naslov {
   display: flex;
@@ -235,8 +235,8 @@ ul{
   margin-left: 35px;
 }
 .image1 img{
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100% auto;
+  max-height: 100% auto;
 }
 .container3{
   display: flex;
@@ -297,8 +297,8 @@ ul{
   margin-top: 65px
 }
 .image2 img{
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100% auto;
+  max-height: 100% auto;
 }
 footer{
   display: flex;
@@ -322,3 +322,77 @@ footer{
 .footer-content p span{
   margin-right: 0.5rem;
 }
+
+@media (max-width: 1080px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  nav li {
+    margin: 0 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .login-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    height: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 50px;
+  }
+
+  .left {
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+
+  .extras {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  ul {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.8;
+  }
+
+  .right img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .service {
+    width: 400px;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .service h3 {
+    font-size: 20px;
+  }
+
+  .service p {
+    font-size: 14px;
+  }
+}
+
