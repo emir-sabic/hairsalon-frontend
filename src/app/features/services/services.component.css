@@ -159,8 +159,8 @@ ul{
   margin-left: 35px;
 }
 .image img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100% auto;
+  max-height: 100% auto;
 }
 .naslov {
   display: flex;
@@ -235,8 +235,8 @@ ul{
   margin-left: 35px;
 }
 .image1 img{
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100% auto;
+  max-height: 100% auto;
 }
 .container3{
   display: flex;
@@ -297,8 +297,8 @@ ul{
   margin-top: 65px
 }
 .image2 img{
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100% auto;
+  max-height: 100% auto;
 }
 footer{
   display: flex;
