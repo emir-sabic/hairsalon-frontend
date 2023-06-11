@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
+  showReviewForm: boolean = false;
 
+  openReviewForm() {
+    this.showReviewForm = true;
+  }
+
+  closeReviewForm() {
+    this.showReviewForm = false;
+  }
 }
