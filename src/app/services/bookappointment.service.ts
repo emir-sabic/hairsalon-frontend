@@ -5,6 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environments';
 
 
+
 @Injectable()
 export class AppointmentService {
 
@@ -23,7 +24,7 @@ export class AppointmentService {
 
   createAppointment(appointment: BookAppointment): Observable<BookAppointment> {
   console.log('Sending appointment data to backend:', appointment);
-      return this.http.post<BookAppointment>(`${this.baseUrl}/createappointment`, {appointment});
+      return this.http.post<BookAppointment>(`${this.baseUrl}/bookapointment`, appointment);
   }
 
   deleteAppointment(appointmentid: number): Observable<null> {
