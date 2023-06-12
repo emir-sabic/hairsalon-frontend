@@ -1,11 +1,9 @@
 
 footer {
-  margin: 15px auto;
   background-color: #fff;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  margin-top: 100px;
   height: 400px;
 }
 
