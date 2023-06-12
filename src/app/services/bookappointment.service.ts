@@ -22,10 +22,11 @@ export class AppointmentService {
     return this.http.get<BookAppointment>(`${this.baseUrl}/${appointmentid}`);
   }
 
-  createAppointment(appointment: BookAppointment): Observable<BookAppointment> {
-  console.log('Sending appointment data too backend:', appointment);
-      return this.http.post<BookAppointment>(`${this.baseUrl}/bookapointment`, appointment);
+  createAppointment(appointment: BookAppointment){
+    console.log('Sending appointment data to backend:', appointment);
+    this.http.post<BookAppointment>(`${this.baseUrl}/bookappointment`, appointment);
   }
+
 
   deleteAppointment(appointmentid: number): Observable<null> {
     this.http.delete(`${this.baseUrl}/${appointmentid}`);

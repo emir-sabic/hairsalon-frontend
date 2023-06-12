@@ -14,9 +14,13 @@ import { ServicesComponent } from './features/services/services.component';
 import { SignupComponent } from './features/signup/signup.component';
 import { AboutusComponent } from './features/aboutus/aboutus.component';
 
-import { AppointmentService } from './services//bookappointment.service';
+import { AppointmentService } from './services/bookappointment.service';
+import { ModelSignupService } from './services/modelsignup.service';
+import { NewsletterService } from './services/newsletter.service';
 import { ReviewComponent } from './features/review/review.component';
 import { ReviewPopupComponent } from './review-popup/review-popup.component';
+import { FooterComponent } from './features/footer/footer.component';
+import { StylistComponent } from './features/stylist/stylist.component';
 
 
 @NgModule({
@@ -30,14 +34,16 @@ import { ReviewPopupComponent } from './review-popup/review-popup.component';
     ServicesComponent,
     AboutusComponent,
     ReviewComponent,
-    ReviewPopupComponent
+    ReviewPopupComponent,
+    FooterComponent,
+    StylistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AppointmentService],
+  providers: [AppointmentService, ModelSignupService, NewsletterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
