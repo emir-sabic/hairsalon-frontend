@@ -9,9 +9,9 @@ import { ModelSignup } from '../../models/modelsignup.model';
 })
 export class ModelsignupComponent {
 
-// constructor(private modelservice: ModelSignupService) {}
+constructor(private modelservice: ModelSignupService) {}
 
- modelsignupmodel: ModelSignup = {
+modelsignupmodel: ModelSignup = {
      fullname: '',
      email: '',
      phonenumber: '',
@@ -19,12 +19,13 @@ export class ModelsignupComponent {
      prevexp: ''
    };
 
-  signupNow() {
-      this.modelsignupmodel.fullname = (<HTMLInputElement>document.getElementById('fullname')).value;
-      this.modelsignupmodel.email = (<HTMLInputElement>document.getElementById('email')).value;
-      this.modelsignupmodel.phonenumber = (<HTMLInputElement>document.getElementById('phonenumber')).value;
-      this.modelsignupmodel.age = (<HTMLInputElement>document.getElementById('age')).value;
-      this.modelsignupmodel.prevexp = (<HTMLInputElement>document.getElementById('prevexp')).value;
-//     this.modelservice.createModelSignup(this.modelsignupmodel);
-  }
+signupNow() {
+  this.modelsignupmodel.fullname = (<HTMLInputElement>document.getElementById('name')).value;
+  this.modelsignupmodel.email= (<HTMLInputElement>document.getElementById('email')).value;
+  this.modelsignupmodel.phonenumber = (<HTMLInputElement>document.getElementById('phonenumber')).value;
+  this.modelsignupmodel.age = (<HTMLInputElement>document.getElementById('age')).value;
+  this.modelsignupmodel.prevexp = (<HTMLTextAreaElement>document.getElementById('message')).value;
+
+  this.modelservice.createModelSignup(this.modelsignupmodel);
+}
 }
