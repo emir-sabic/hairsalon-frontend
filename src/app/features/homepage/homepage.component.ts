@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomepageComponent {
   showReviewForm: boolean = false;
+  reviews: any[] = [];
 
   openReviewForm() {
     this.showReviewForm = true;
@@ -15,4 +16,11 @@ export class HomepageComponent {
   closeReviewForm() {
     this.showReviewForm = false;
   }
+
+  submitReview(reviewData: any) {
+    // Add the submitted review to the reviews array
+    this.reviews.push(reviewData);
+    this.closeReviewForm();
+  }
+
 }
