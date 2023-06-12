@@ -42,46 +42,61 @@
     </div>
   </div>
 </div>
-
-<div class="review-section" style="background-image: url(assets/images/slidza.jpg); background-size: cover; background-position: center; padding: 50px;">
-  <div class="review-container" style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 60px;">
-    <div class="review-box">
-      <div class="review-text">
-        <p>"I've been going to Hair Saloon for years now and I always leave with a great haircut. The staff is friendly and the atmosphere is relaxed. Highly recommend!"</p>
-      </div>
+<div class="review-section">
+  <div class="review-container">
+    <div class="review-box" *ngFor="let review of reviews">
       <div class="review-author">
-        <img src="assets/images/man.jpg" alt="man1" style="border-radius: 50%; max-width: 100%; height: auto; margin-right: 10px;">
-        <div>
-          <h3>Emir Sabic</h3>
-          <p>Customer</p>
+        <img src="assets/images/avatar.png" alt="man1" class="review-author-image">
+        <div class="review-author-name">
+          {{ review.name }}
         </div>
       </div>
-    </div>
-    <div class="review-box">
-      <div class="review-text">
-        <p>"I was nervous about trying a new hair salon, but Hair Saloon exceeded my expectations. Will definitely be coming back!"</p>
-      </div>
-      <div class="review-author">
-        <img src="assets/images/man.jpg" alt="man2" style="border-radius: 50%; max-width: 100%; height: auto; margin-right: 10px;">
-        <div>
-          <h3>Dino Klacar</h3>
-          <p>Customer</p>
-        </div>
+      <div class="review-comment">
+        {{ review.review }}
       </div>
     </div>
   </div>
-  <div class="review-cta" style="text-align: center; margin-top: 5px;">
+  <div class="review-cta">
     <h2 class="minuta">Have a minute?</h2>
     <p>Leave us a review and let us know how we're doing.</p>
     <button class="review-btn" (click)="openReviewForm()">Leave a Review</button>
   </div>
 </div>
-<app-review-popup *ngIf="showReviewForm" (close)="closeReviewForm()"></app-review-popup>
+<app-review-popup
+  *ngIf="showReviewForm"
+  (close)="closeReviewForm()"
+  (submit)="submitReview($event)"
+></app-review-popup>
+</body>
 <footer>
   <div class="footer-content">
-    <h3>Contact Us</h3>
-    <p>Ulica Dzemala Bijedica, Sarajevo, BiH. | Phone: 555-555-5555 | Email: info@hairsalon.com</p>
-    <p>&copy; 2023 Hair Salon. All Rights Reserved.</p>
+    <div class="left-content">
+      <div class="about-us">
+        <h3>About Us</h3>
+        <p>The Art of Hair Design. Experience the ultimate in hair design with our expert stylists.</p>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Address: Ulica Dzemala Bijedica, Sarajevo, BiH.</p>
+        <p>Phone: 555-555-5555</p>
+        <p>Email: info@hairsalon.com</p>
+      </div>
+      <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/CrnaHronikaBiHofficial"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/crnahronikabih/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="right-content">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d819.1379065033198!2d18.306851212728567!3d44.69970272140225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e9e4885715907%3A0xa5bf3da37238e63a!2sFrizerski%20Salon%20%22Pilus%22!5e0!3m2!1sen!2sus!4v1686418456121!5m2!1sen!2sus" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </footer>
+<p class="footer-bottom">&copy; 2023 Hair Salon. All Rights Reserved.</p>
 

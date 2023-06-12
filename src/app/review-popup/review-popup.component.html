@@ -1,15 +1,15 @@
 <div class="review-popup">
   <div class="review-form">
     <h3>Leave a Review</h3>
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <input type="text" id="name" name="name" placeholder="Your name" [(ngModel)]="reviewData.name" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <input type="email" id="email" name="email" placeholder="Your email" [(ngModel)]="reviewData.email" required>
 
       <label for="review">Review:</label>
-      <textarea id="review" name="review" placeholder="Your review" required></textarea>
+      <textarea id="review" name="review" placeholder="Your review" [(ngModel)]="reviewData.review" required></textarea>
 
       <button type="submit">Submit</button>
     </form>
