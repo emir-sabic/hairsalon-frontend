@@ -22,6 +22,9 @@ import { ReviewComponent } from './features/review/review.component';
 import { ReviewPopupComponent } from './review-popup/review-popup.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { StylistComponent } from './features/stylist/stylist.component';
+import { UserService } from './services/user.service';
+import { LoginService } from './services/login.service';
+import { SignupService } from './services/signup.service';
 
 
 @NgModule({
@@ -45,7 +48,7 @@ import { StylistComponent } from './features/stylist/stylist.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AppointmentService, ModelSignupService, NewsletterService],
+  providers: [AppointmentService, ModelSignupService, NewsletterService, SignupService,UserService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
