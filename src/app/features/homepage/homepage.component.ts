@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class HomepageComponent {
   showReviewForm: boolean = false;
   reviews: any[] = [];
+
+  @ViewChild('reviewContainer') reviewContainer!: ElementRef;
 
   openReviewForm() {
     this.showReviewForm = true;
@@ -23,4 +25,20 @@ export class HomepageComponent {
     this.closeReviewForm();
   }
 
+  scrollCarousel(direction: 'prev' | 'next') {
+    const container = this.reviewContainer.nativeElement;
+    const scrollAmount = container.offsetWidth + 20; // Scroll by the width of the container plus additional spacing
+
+    if (direction === 'prev') {
+      container.scroll({
+        left: container.scrollLeft - scrollAmount,
+        behavior: 'smooth'
+      });
+    } else if (direction === 'next') {
+      container.scroll({
+        left: container.scrollLeft + scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  }
 }

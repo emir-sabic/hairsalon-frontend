@@ -90,3 +90,26 @@ iframe {
   height: 100%;
   border: none;
 }
+
+@media screen and (max-width: 390px) {
+  footer {
+    height: auto;
+    padding: 1em;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+}
