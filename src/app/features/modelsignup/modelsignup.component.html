@@ -9,7 +9,7 @@
   </div>
   <nav>
     <ul>
-      <li><a href="#">Stylists</a></li>
+      <li><a [routerLink]="['/stylist']">Stylist</a></li>
       <li><a [routerLink]="['/services']">Services</a></li>
       <li><a [routerLink]="['/bookapointment']">Book Appointment</a></li>
       <li><a [routerLink]="['/modelsignup']">Model Sign-up</a></li>
@@ -18,8 +18,9 @@
     </ul>
   </nav>
 </header>
+<body>
 
-<h1>Become A Model At Our Hairsalon</h1>
+<div class="heder">Become A Model At Our Hairsalon</div>
 <div class="paragraph">
   <p>Thank you for expressing interest in becoming model for our hair salon. We are excited to review your application.
   <p>Please provide us with the following information to help us better understand your experience and qualifications:</p>
@@ -43,8 +44,8 @@
 
     <button (click)="signupNow()">Sign Up</button>
 </form>
+</body>
 <app-footer></app-footer>
 
-<p class="footer-bottom">&copy; 2023 Hair Salon. All Rights Reserved.</p>
 
 

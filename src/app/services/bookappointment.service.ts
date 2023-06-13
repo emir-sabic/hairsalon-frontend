@@ -3,13 +3,14 @@ import {Observable, of} from 'rxjs';
 import {BookAppointment} from '../models/bookappointment.model';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environments';
-
+import {Service} from '../models/service.model';
+import {Stylist} from '../models/stylist.model';
 
 
 @Injectable()
 export class AppointmentService {
 
-  private readonly baseUrl: string = `${environment.backendUrl}/bookappointment`;
+  private readonly baseUrl: string = `${environment.backendUrl}/bookapointment`;
 
   constructor(private http: HttpClient) {
   }
@@ -22,9 +23,9 @@ export class AppointmentService {
     return this.http.get<BookAppointment>(`${this.baseUrl}/${appointmentid}`);
   }
 
-  createAppointment(appointment: BookAppointment){
+  createAppointment(appointment: BookAppointment) : Observable<BookAppointment>{
     console.log('Sending appointment data to backend:', appointment);
-    this.http.post<BookAppointment>(`${this.baseUrl}/bookappointment`, appointment);
+    return this.http.post<BookAppointment>(`${this.baseUrl}/bookapointment`, appointment);
   }
 
 
@@ -32,4 +33,13 @@ export class AppointmentService {
     this.http.delete(`${this.baseUrl}/${appointmentid}`);
     return of(null);
   }
+
+  getServices(serviceid?: number): Observable<Service> {
+    return this.http.get<Service>(`${this.baseUrl}/${serviceid}/list`);
+  }
+
+  getStylists(stylistid?: number): Observable<Stylist> {
+    return this.http.get<Stylist>(`${this.baseUrl}/${stylistid}/list`);
+  }
+
 }

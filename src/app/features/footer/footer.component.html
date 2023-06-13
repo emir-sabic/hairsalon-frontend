@@ -13,10 +13,11 @@
       </div>
       <div class="newsletter">
         <h3>Subscribe to Our Newsletter</h3>
-        <form>
-          <input type="email" placeholder="Enter your email" required>
-          <button (click)="subscribeNow()">Subscribe</button>
-        </form>
+        <div>
+          <input type="email" [(ngModel)]="newslettermodel.email" placeholder="Enter your email">
+          <button (click)="subscribe()">Subscribe</button>
+        </div>
+
 
         <div class="social-icons">
           <a href="https://www.facebook.com/CrnaHronikaBiHofficial"><i class="fab fa-facebook-f"></i></a>
@@ -29,3 +30,4 @@
     </div>
   </div>
 </footer>
+<p class="footer-bottom">&copy; 2023 Hair Salon. All Rights Reserved.</p>
