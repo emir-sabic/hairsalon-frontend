@@ -19,10 +19,12 @@
     </ul>
   </nav>
 </header>
-<div class="container">
-  <h1>Book Appointment</h1>
-  <h2>Discover a new you. Book your appointment today!</h2>
-  <form>
+<body>
+<div class="heder">Book Appointment</div>
+  <div class="paragraph">
+    <p>Discover a new you. Book your appointment today!</p>
+  </div>
+  <form name="forma">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -38,27 +40,22 @@
     <label for="stylist">Stylist:</label>
     <select id="stylist" name="stylist" required>
       <option value="">--Please choose a stylist--</option>
-      <option value="Dino">Dino</option>
-      <option value="Emir">Emir</option>
-      <option value="Belmir">Belmir</option>
-      <option value="Altin">Altin</option>
+      <option *ngFor="let stylist of stylists" [value]="stylist.id">{{ stylist.name }}</option>
     </select>
 
     <label for="services">Services:</label>
     <select id="services" name="services" required>
       <option value="">--Please choose a stylist--</option>
-      <option value="Haircut">Haircut</option>
-      <option value="Styling">Styling</option>
-      <option value="Washing">Washing</option>
-      <option value="Coloring">Coloring</option>
+      <option *ngFor="let service of services" [value]="service.id">{{ service.name }}</option>
     </select>
 
+
 <!--    <input type="submit" routnerLink= "/createappointment" value="Book Now">-->
-    <button type="submit " class="btn btn-primary">Book Now</button>
+    <button type="button" (click)="bookNow()">Book Now</button>
 
   </form>
-</div>
+</body>
 <app-footer></app-footer>
 
-<p class="footer-bottom">&copy; 2023 Hair Salon. All Rights Reserved.</p>
+
 

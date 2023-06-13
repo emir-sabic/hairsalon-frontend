@@ -16,7 +16,23 @@ export class FooterComponent {
     email: ''
   };
 
-  subscribeNow() {
-    this.newsletterService.createNewsletter(this.newslettermodel);
+ subscribe() {
+    if (this.newslettermodel.email=== '') {
+      console.warn('Email field is empty');
+      return;
+    }
+    this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
+    this.newsletterService.createNewsletter(this.newslettermodel)
   }
+//
+//   constructor(private newsletterService: NewsletterService) {}
+//
+//   newslettermodel: Newsletter = {
+//     email: ''
+//   };
+//
+//   subscribeNow() {
+//   this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
+//     this.newsletterService.createNewsletter(this.newslettermodel);
+//   }
 }

@@ -4,6 +4,7 @@ import {Newsletter} from '../models/newsletter.model';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environments';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,5 +17,13 @@ export class NewsletterService {
 
   createNewsletter(news: Newsletter) {
     this.http.post<Newsletter>(`${this.baseUrl}/newsletter`, {news});
+  }
+
+  getNewsLetters(newsid: number): Observable<Newsletter[]> {
+    return this.http.get<Newsletter[]>(`${this.baseUrl}/${newsid}/list`);
+  }
+
+  getNewsLetter(newsid: number): Observable<Newsletter> {
+    return this.http.get<Newsletter>(`${this.baseUrl}/${newsid}`);
   }
 }

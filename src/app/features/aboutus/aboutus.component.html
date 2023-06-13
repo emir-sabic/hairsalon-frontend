@@ -6,7 +6,7 @@
   </div>
   <nav>
     <ul>
-      <li><a href="#">Stylists</a></li>
+      <li><a [routerLink]="['/stylist']">Stylist</a></li>
       <li><a [routerLink]="['/services']">Services</a></li>
       <li><a [routerLink]="['/bookapointment']">Book Appointment</a></li>
       <li><a [routerLink]="['/modelsignup']">Model Sign-up</a></li>
@@ -15,64 +15,23 @@
     </ul>
   </nav>
 </header>
-<body class="about-page">
-<div class="about-section">
-  <div class="about-content">
-    <div class="about-flex">
-      <div class="about-image">
-        <img src="assets/images/chair.png" alt="chair">
-      </div>
-      <div class="about-text">
-        <h2>About us</h2>
-        <h1>While today’s world is filled with numerous clip joints and fancy salons, our Hair Salon is building something better.</h1>
-        <p>Since 1997, The Hair Salon has been helping to recapture this tradition. We’re filling a void in life that has as much to do with the restoration of men and women as it does with the business of haircutting.</p>
-        <button class="learn-more-btn">Learn More</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="review-section">
-  <div class="review-container">
-    <div class="review-box">
-      <div class="review-text">
-        <p>"I've been going to Hair Saloon for years now and I always leave with a great haircut. The staff is friendly and the atmosphere is relaxed. Highly recommend!"</p>
-      </div>
-      <div class="review-author">
-        <img src="assets/images/man.jpg" alt="man1">
-        <div>
-          <h3>Emir Sabic</h3>
-          <p>Customer</p>
-        </div>
-      </div>
-    </div>
-    <div class="review-box">
-      <div class="review-text">
-        <p>"I was nervous about trying a new hair salon, but Hair Saloon exceeded my expectations. Will definitely be coming back!"</p>
-      </div>
-      <div class="review-author">
-        <img src="assets/images/man.jpg" alt="man2">
-        <div>
-          <h3>Dino Klacar</h3>
-          <p>Customer</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="review-cta">
-    <h2 class="minuta">Have a minute?</h2>
-    <p>Leave us a review and let us know how we're doing.</p>
-    <button class="review-btn">Leave a Review</button>
-  </div>
-</div>
-
-<footer>
-  <div class="footer-content">
-    <h3>Contact Us</h3>
-    <p>Ulica Dzemala Bijedica, Sarajevo, BiH. | Phone: 555-555-5555 | Email: info@hairsalon.com</p>
-    <p>&copy; 2023 Hair Salon. All Rights Reserved.</p>
-  </div>
-</footer>
+<body>
+<main>
+  <section class="about">
+    <h2>Welcome to Our Hair Salon</h2>
+    <p>
+      At our hair salon, we believe in providing exceptional services that make our clients look and feel their best. With our team of skilled stylists and a modern and welcoming atmosphere, we strive to create a memorable salon experience for each and every client.
+    </p>
+    <p>
+      Our dedicated staff stays up-to-date with the latest hair trends and techniques to ensure you receive the highest quality service. Whether you're looking for a simple haircut, a trendy hairstyle, or a complete hair transformation, we've got you covered.
+    </p>
+    <p>
+      Step into our salon and let us pamper you with our range of services, including haircuts, styling, coloring, highlights, extensions, and more. We listen to your needs and work closely with you to achieve the perfect look that suits your unique style and personality.
+    </p>
+  </section>
+</main>
 </body>
+<app-footer></app-footer>
 
 
