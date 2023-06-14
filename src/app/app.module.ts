@@ -42,7 +42,7 @@ import { AdminComponent } from './features/admin/admin.component';
     ReviewComponent,
     ReviewPopupComponent,
     FooterComponent,
-    StylistComponent,git 
+    StylistComponent,
     AdminComponent
   ],
   imports: [
