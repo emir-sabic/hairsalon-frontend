@@ -38,8 +38,8 @@ export class AppointmentService {
     return this.http.get<Service[]>(`${environment.backendUrl}/api/servis`);
   }
 
-  getStylists(stylistid?: number): Observable<Stylist> {
-    return this.http.get<Stylist>(`${environment.backendUrl}/api/stylist`);
+  getStylists(stylistid?: number): Observable<Stylist[]> {
+    return this.http.get<Stylist[]>(`${environment.backendUrl}/api/stylist`);
   }
 
 

@@ -15,8 +15,8 @@ export class NewsletterService {
   constructor(private http: HttpClient) {
   }
 
-  createNewsletter(news: Newsletter) {
-    this.http.post<Newsletter>(`${this.baseUrl}/new`, {news});
+  createNewsletter(news: Newsletter): Observable<Newsletter>{
+    return this.http.post<Newsletter>(`${this.baseUrl}/new`, news);
   }
 
   getNewsLetters(newsid: number): Observable<Newsletter[]> {
