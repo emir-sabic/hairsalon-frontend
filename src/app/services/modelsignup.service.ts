@@ -16,8 +16,13 @@ export class ModelSignupService {
   createModelSignup(model: ModelSignup): Observable<ModelSignup> {
       return this.http.post<ModelSignup>(`${this.baseUrl}/new`, model);
   }
-  getModelSignup(modelsingupid: number): Observable<ModelSignup[]> {
+  getModelSignup(modelsingupid?: number): Observable<ModelSignup[]> {
     return this.http.get<ModelSignup[]>(`${this.baseUrl}`);
+  }
+
+  deleteModel(modelid: number): Observable<null> {
+    this.http.delete(`${this.baseUrl}/delete/${modelid}`);
+    return of(null);
   }
 
 }
