@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NewsletterService } from '../../services/newsletter.service';
 import { Newsletter } from '../../models/newsletter.model'
 
@@ -10,29 +10,26 @@ import { Newsletter } from '../../models/newsletter.model'
 })
 export class FooterComponent {
 
-  constructor(private newsletterService: NewsletterService) {}
-
-  newslettermodel: Newsletter = {
-    email: ''
-  };
-
- subscribe() {
-    if (this.newslettermodel.email=== '') {
-      console.warn('Email field is empty');
-      return;
-    }
-    this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
-    this.newsletterService.createNewsletter(this.newslettermodel);
-  }
-//
 //   constructor(private newsletterService: NewsletterService) {}
 //
 //   newslettermodel: Newsletter = {
 //     email: ''
 //   };
 //
-//   subscribeNow() {
-//   this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
-//     this.newsletterService.createNewsletter(this.newslettermodel);
+//  sub() {
+//     this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
+//     this.newsletterService.createNewsletter(this.newslettermodel).subscribe();
+//     console.log();
 //   }
+
+  constructor(private newsletterService: NewsletterService) {}
+
+  newslettermodel: Newsletter = {
+    email: ''
+  };
+
+  subscribeNow() {
+  this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
+    this.newsletterService.createNewsletter(this.newslettermodel);
+  }
 }

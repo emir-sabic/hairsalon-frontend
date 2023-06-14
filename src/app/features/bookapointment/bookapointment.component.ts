@@ -18,6 +18,7 @@ export class BookapointmentComponent {
     stylist: '',
     service: ''
   };
+  stylists: Stylist[]= [];
   services: Service[]= [];
 
   constructor(private appointmentService: AppointmentService) {}
@@ -44,8 +45,6 @@ export class BookapointmentComponent {
     this.appointmentService.getServices().subscribe(
       (data) => {
         this.services = data;
-        console.log(this.services[0].name);
-
       },
       error => {
         console.error('Error fetching data:', error);
@@ -53,13 +52,10 @@ export class BookapointmentComponent {
     );
   }
 
-
-    stylists: Stylist[]= [];
-
     fetchStylist() {
       this.appointmentService.getStylists().subscribe(
-        data => {
-          this.stylists = [data];
+        (data) => {
+          this.stylists = data;
         },
         error => {
           console.error('Error fetching data:', error);
