@@ -9,7 +9,7 @@ import { AppointmentService } from '../../services/bookappointment.service';
   templateUrl: './bookapointment.component.html',
   styleUrls: ['./bookapointment.component.css']
 })
-export class BookapointmentComponent implements OnInit  {
+export class BookapointmentComponent {
   bookappointmentmodel: BookAppointment = {
     name: '',
     email: '',
@@ -18,6 +18,7 @@ export class BookapointmentComponent implements OnInit  {
     stylist: '',
     service: ''
   };
+  services: Service[]= [];
 
   constructor(private appointmentService: AppointmentService) {}
 
@@ -32,7 +33,7 @@ export class BookapointmentComponent implements OnInit  {
   }
 
 
-  services: Service[]= [];;
+
 
   ngOnInit() {
       this.fetchService();
@@ -41,8 +42,10 @@ export class BookapointmentComponent implements OnInit  {
 
   fetchService() {
     this.appointmentService.getServices().subscribe(
-      data => {
-        this.services = [data];
+      (data) => {
+        this.services = data;
+        console.log(this.services[0].name);
+
       },
       error => {
         console.error('Error fetching data:', error);

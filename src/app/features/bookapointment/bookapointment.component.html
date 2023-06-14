@@ -46,7 +46,7 @@
     <label for="services">Services:</label>
     <select id="services" name="services" required>
       <option value="">--Please choose a stylist--</option>
-      <option *ngFor="let service of services" [value]="service.id">{{ service.name }}</option>
+      <option *ngFor="let service of services" >{{ service.name }}</option>
     </select>
 
 

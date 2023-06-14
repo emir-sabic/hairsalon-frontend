@@ -25,6 +25,7 @@ import { StylistComponent } from './features/stylist/stylist.component';
 import { UserService } from './services/user.service';
 import { LoginService } from './services/login.service';
 import { SignupService } from './services/signup.service';
+import { ReviewService } from './services/review.service';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import { SignupService } from './services/signup.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AppointmentService, ModelSignupService, NewsletterService, SignupService,UserService, LoginService],
+  providers: [AppointmentService, ModelSignupService, NewsletterService, SignupService,UserService, LoginService, ReviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

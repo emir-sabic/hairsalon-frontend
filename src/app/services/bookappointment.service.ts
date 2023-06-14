@@ -10,22 +10,22 @@ import {Stylist} from '../models/stylist.model';
 @Injectable()
 export class AppointmentService {
 
-  private readonly baseUrl: string = `${environment.backendUrl}/bookapointment`;
+  private readonly baseUrl: string = `${environment.backendUrl}/api/appointment`;
 
   constructor(private http: HttpClient) {
   }
 
   getAppointments(appointmentid: number): Observable<BookAppointment[]> {
-    return this.http.get<BookAppointment[]>(`${this.baseUrl}/${appointmentid}/list`);
+    return this.http.get<BookAppointment[]>(`${this.baseUrl}`);
   }
 
-  getAppointment(appointmentid: number): Observable<BookAppointment> {
-    return this.http.get<BookAppointment>(`${this.baseUrl}/${appointmentid}`);
-  }
+//   getAppointment(appointmentid: number): Observable<BookAppointment> {
+//     return this.http.get<BookAppointment>(`${this.baseUrl}/${appointmentid}`);
+//   }
 
   createAppointment(appointment: BookAppointment) : Observable<BookAppointment>{
     console.log('Sending appointment data to backend:', appointment);
-    return this.http.post<BookAppointment>(`${this.baseUrl}/bookapointment`, appointment);
+    return this.http.post<BookAppointment>(`${this.baseUrl}/new`, appointment);
   }
 
 
@@ -34,12 +34,13 @@ export class AppointmentService {
     return of(null);
   }
 
-  getServices(serviceid?: number): Observable<Service> {
-    return this.http.get<Service>(`${this.baseUrl}/${serviceid}/list`);
+  getServices(serviceid?: number): Observable<Service[]> {
+    return this.http.get<Service[]>(`${environment.backendUrl}/api/servis`);
   }
 
   getStylists(stylistid?: number): Observable<Stylist> {
-    return this.http.get<Stylist>(`${this.baseUrl}/${stylistid}/list`);
+    return this.http.get<Stylist>(`${environment.backendUrl}/api/stylist`);
   }
+
 
 }

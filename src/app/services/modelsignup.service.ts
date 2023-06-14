@@ -8,13 +8,16 @@ import {environment} from '../../environments/environments';
 @Injectable()
 export class ModelSignupService {
 
-  private readonly baseUrl: string = `${environment.backendUrl}/modelsignup`;
+  private readonly baseUrl: string = `${environment.backendUrl}/api/modelsignup`;
 
   constructor(private http: HttpClient) {
   }
 
   createModelSignup(model: ModelSignup): Observable<ModelSignup> {
-      return this.http.post<ModelSignup>(`${this.baseUrl}/modelsignup`, {model});
+      return this.http.post<ModelSignup>(`${this.baseUrl}/new`, model);
+  }
+  getModelSignup(modelsingupid: number): Observable<ModelSignup[]> {
+    return this.http.get<ModelSignup[]>(`${this.baseUrl}`);
   }
 
 }

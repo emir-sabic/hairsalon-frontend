@@ -10,20 +10,20 @@ import {environment} from '../../environments/environments';
 })
 export class NewsletterService {
 
-  private readonly baseUrl: string = `${environment.backendUrl}/newsletter`;
+  private readonly baseUrl: string = `${environment.backendUrl}/api/newsletter`;
 
   constructor(private http: HttpClient) {
   }
 
   createNewsletter(news: Newsletter) {
-    this.http.post<Newsletter>(`${this.baseUrl}/newsletter`, {news});
+    this.http.post<Newsletter>(`${this.baseUrl}/new`, {news});
   }
 
   getNewsLetters(newsid: number): Observable<Newsletter[]> {
-    return this.http.get<Newsletter[]>(`${this.baseUrl}/${newsid}/list`);
+    return this.http.get<Newsletter[]>(`${this.baseUrl}`);
   }
 
-  getNewsLetter(newsid: number): Observable<Newsletter> {
-    return this.http.get<Newsletter>(`${this.baseUrl}/${newsid}`);
-  }
+//   getNewsLetter(newsid: number): Observable<Newsletter> {
+//     return this.http.get<Newsletter>(`${this.baseUrl}/${newsid}`);
+//   }
 }
