@@ -58,9 +58,15 @@ nav a:hover {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+display:flex;
+   background-image: url('src/assets/images/slikalog.jpg');
+      background-size: cover;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: darken;
+      background-position: center;
   padding: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -70,8 +76,18 @@ h1 {
 }
 
 form {
-  display: flex;
-  flex-wrap: wrap;
+   background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 80px; /* Increase the padding to create more space */
+    margin-right: 100px; /* Increase the margin to add more spacing around the form */
+    margin-left: 100px;
+    border-radius: 10px; /* Increase the border radius for rounded corners */
+    box-shadow: 0px 0px 10px 0px #ccc;
+    max-width:80%;
 }
 
 .form-group {
@@ -89,8 +105,9 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="date"],
+input[type="password"],
 select {
-  width: 80%;
+  width: 350px;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;

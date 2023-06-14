@@ -16,8 +16,8 @@
 </header>
 
 <div class="container" xmlns="http://www.w3.org/1999/html">
-  <h1>Login</h1>
   <form>
+    <h1>Login</h1>
     <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -27,6 +27,9 @@
       <input type="password" id="password" name="password" required>
     </div>
     <button type="submit" class="btn btn-primary" >Login</button>
+    <a [routerLink]="['/signup']" >Don't have a account Sign up</a>
+
   </form>
-  <a [routerLink]="['/signup']" >Sign up</a>
+
 </div>
+<app-footer></app-footer>
