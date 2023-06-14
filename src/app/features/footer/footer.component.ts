@@ -22,7 +22,7 @@ export class FooterComponent {
       return;
     }
     this.newslettermodel.email = (<HTMLInputElement>document.getElementById('email')).value;
-    this.newsletterService.createNewsletter(this.newslettermodel)
+    this.newsletterService.createNewsletter(this.newslettermodel);
   }
 //
 //   constructor(private newsletterService: NewsletterService) {}
