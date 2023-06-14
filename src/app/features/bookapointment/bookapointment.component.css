@@ -128,7 +128,32 @@ form[name="forma"]{
   box-shadow: 0px 0px 10px #cccccc;
   margin: 0 auto;
   max-width: 500px;
-
-
-
 }
+
+@media only screen and (max-width: 390px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .body {
+    width: 390px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  nav li {
+    margin: 0.25rem;
+  }
+
+  nav a {
+    font-size: 8px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
