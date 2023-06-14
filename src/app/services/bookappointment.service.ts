@@ -7,6 +7,7 @@ import {Service} from '../models/service.model';
 import {Stylist} from '../models/stylist.model';
 
 
+
 @Injectable()
 export class AppointmentService {
 
@@ -15,7 +16,7 @@ export class AppointmentService {
   constructor(private http: HttpClient) {
   }
 
-  getAppointments(appointmentid: number): Observable<BookAppointment[]> {
+  getAppointments(appointmentid?: number): Observable<BookAppointment[]> {
     return this.http.get<BookAppointment[]>(`${this.baseUrl}`);
   }
 
@@ -30,7 +31,7 @@ export class AppointmentService {
 
 
   deleteAppointment(appointmentid: number): Observable<null> {
-    this.http.delete(`${this.baseUrl}/${appointmentid}`);
+    this.http.delete(`${this.baseUrl}/delete/${appointmentid}`);
     return of(null);
   }
 
@@ -42,5 +43,21 @@ export class AppointmentService {
     return this.http.get<Stylist[]>(`${environment.backendUrl}/api/stylist`);
   }
 
+  createStylist(stylist: Stylist) : Observable<Stylist>{
+    console.log('Sending appointment data to backend:', stylist);
+    return this.http.post<Stylist>(`${environment.backendUrl}/api/stylist/new`, stylist);
+  }
+  creaetService(service: Service) : Observable<Service>{
+    console.log('Sending appointment data to backend:', service);
+    return this.http.post<Service>(`${environment.backendUrl}/api/servis/new`, service);
+  }
 
+  deleteStylist(stylistid: number): Observable<null> {
+    this.http.delete(`${environment.backendUrl}/api/stylist/delete/${stylistid}`);
+    return of(null);
+  }
+  deleteService(serviceid: number): Observable<null> {
+    this.http.delete(`${environment.backendUrl}/api/servis/delete/${serviceid}`);
+    return of(null);
+  }
 }

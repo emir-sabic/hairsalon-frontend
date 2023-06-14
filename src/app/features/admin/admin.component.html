@@ -1,0 +1,76 @@
+<div class="admin-page">
+  <h1>Welcome to the Hair Salon Admin Page</h1>
+
+  <div class="section">
+    <h2>Appointments</h2>
+    <ul>
+    <li *ngFor="let appointment of appointments; let i = index">
+      {{ i + 1 }}. {{ appointment.name }} - {{ appointment.email }} - {{ appointment.date }} - {{ appointment.time }} - {{ appointment.stylist }} - {{ appointment.service }}
+      <button (click)="deleteAppointment(i)">Delete</button>
+    </li>
+      </ul>
+  </div>
+
+  <div class="section">
+    <h2>Models</h2>
+    <ul>
+       <li *ngFor="let model of models; let i = index">
+        {{ i + 1 }}. {{ model.fullname }} - {{ model.email }} - {{ model.phonenumber }} - {{ model.age }} - {{ model.prevexp }}
+        <button (click)="deleteModel(i)">Delete</button>
+       </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Stylists</h2>
+    <ul>
+      <li *ngFor="let stylist of stylists; let i = index">
+        {{ i + 1 }}. {{ stylist.name }}
+        <button (click)="deleteStylist(i)">Delete</button>
+      </li>
+    </ul>
+    <div>
+      <button (click)="openStylistInput()">Add Stylist</button>
+      <div *ngIf="showStylistInput">
+        <input type="text" [(ngModel)]="newStylistName" placeholder="Enter stylist name">
+        <button (click)="addStylist()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Services</h2>
+    <ul>
+      <li *ngFor="let service of services; let i = index">
+        {{ i + 1 }}. {{ service.name }}
+        <button (click)="deleteService(i)">Delete</button>
+      </li>
+    </ul>
+    <div>
+      <button (click)="openServiceInput()">Add Service</button>
+      <div *ngIf="showServiceInput">
+        <input type="text" [(ngModel)]="newServiceName" placeholder="Enter service name">
+        <button (click)="addService()">Add</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <h2>Users</h2>
+    <ul>
+      <li>User 1</li>
+      <li>User 2</li>
+      <!-- Display users dynamically here -->
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Reviews</h2>
+    <ul>
+      <li>Review 1</li>
+      <li>Review 2</li>
+      <!-- Display users dynamically here -->
+    </ul>
+  </div>
+</div>

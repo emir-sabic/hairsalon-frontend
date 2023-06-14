@@ -11,6 +11,7 @@ import { AppointmentService } from './services/bookappointment.service';
 import { AboutusComponent } from './features/aboutus/aboutus.component';
 import { ReviewComponent } from './features/review/review.component';
 import { StylistComponent } from './features/stylist/stylist.component';
+import { AdminComponent } from './features/admin/admin.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
 {path:'bookapointment', component:BookapointmentComponent},
 {path:'aboutus', component:AboutusComponent},
 {path:'review', component:ReviewComponent},
-{path:'stylist', component:StylistComponent}
+{path:'stylist', component:StylistComponent},
+{path:'admin', component:AdminComponent}
+
 
 ];
 

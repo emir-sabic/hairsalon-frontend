@@ -26,6 +26,7 @@ import { UserService } from './services/user.service';
 import { LoginService } from './services/login.service';
 import { SignupService } from './services/signup.service';
 import { ReviewService } from './services/review.service';
+import { AdminComponent } from './features/admin/admin.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ReviewService } from './services/review.service';
     ReviewComponent,
     ReviewPopupComponent,
     FooterComponent,
-    StylistComponent
+    StylistComponent,git 
+    AdminComponent
   ],
   imports: [
     BrowserModule,
