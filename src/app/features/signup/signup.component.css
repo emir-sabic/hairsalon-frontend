@@ -103,8 +103,9 @@ label {
 }
 
 input[type="text"],
+input[type="lastname"],
 input[type="email"],
-input[type="date"],
+input[type="username"],
 input[type="password"],
 select {
   width: 350px;
