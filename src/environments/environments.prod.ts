@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendUrl: 'https://hairsalon-backend.herokuapp.com',
+  backendUrl: 'https://hairsalondbe-8eef5e6ce5a3.herokuapp.com/',
 };
