@@ -12,6 +12,7 @@
       <li><a [routerLink]="['/modelsignup']">Model Sign-up</a></li>
       <li><a [routerLink]="['/aboutus']">About Us</a></li>
       <li><a [routerLink]="['/login']" class="login-btn">Login</a></li>
+      <li><a [routerLink]="['/signup']" class="login-btn">Signup</a></li>
     </ul>
   </nav>
 </header>
@@ -54,6 +55,7 @@
       <div class="review-comment">
         {{ review.review }}
       </div>
+      <button (click)="deleteReview(review)"  *ngIf="review.username===username">Delete</button>
     </div>
   </div>
   <div class="carousel-buttons" *ngIf="reviews.length > 4">

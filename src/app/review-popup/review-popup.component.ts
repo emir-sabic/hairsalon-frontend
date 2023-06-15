@@ -12,15 +12,19 @@ export class ReviewPopupComponent {
   reviewData: any = {
     name: '',
     email: '',
-    review: ''
+    review: '',
+    username: sessionStorage.getItem("app.username")
   };
 
   onSubmit() {
+
     this.submit.emit(this.reviewData);
+
     this.reviewData = {
       name: '',
       email: '',
-      review: ''
+      review: '',
+      username: ''
     };
   }
 

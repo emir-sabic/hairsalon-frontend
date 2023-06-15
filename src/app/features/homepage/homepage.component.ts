@@ -9,6 +9,7 @@ import {ReviewService} from "../../services/review.service";
 export class HomepageComponent implements OnInit{
   showReviewForm: boolean = false;
   reviews: any[] = [];
+  username = sessionStorage.getItem("app.username");
 
   constructor(private reviewService: ReviewService) {
   }
@@ -37,6 +38,7 @@ openReviewForm() {
     this.closeReviewForm();
   }
 
+
   deleteReview(review: any) {
     if(review.id) {
       this.reviewService.deleteReview(review.id).subscribe((response) => {
@@ -47,6 +49,7 @@ openReviewForm() {
     }
   }
 scrollCarousel(direction: 'prev' | 'next') {
+  console.log(this.username);
     const container = this.reviewContainer.nativeElement;
     const scrollAmount = container.offsetWidth + 20; // Scroll by the width of the container plus additional spacing
 

@@ -1,6 +1,8 @@
 <header>
   <div class="logo">
-    <img src="assets/images/logo.avif" alt="Our Logo">
+    <a [routerLink]="['/']">
+      <img src="assets/images/logo.avif" alt="Our Logo" [routerLink]="['/']">
+    </a>
   </div>
   <nav>
     <ul>
@@ -10,34 +12,40 @@
       <li><a [routerLink]="['/bookapointment']">Book Appointment</a></li>
       <li><a [routerLink]="['/modelsignup']">Model Sign-up</a></li>
       <li><a [routerLink]="['/aboutus']">About Us</a></li>
-      <li><a [routerLink]="['/']" class="login-btn">Home</a></li>
+      <li><a [routerLink]="['/login']" class="login-btn">Login</a></li>
+      <li><a [routerLink]="['/']" class="login-btn">Signup</a></li>
     </ul>
   </nav>
 </header>
 <div class="container">
-  <form >
-    <h1>Sign Up</h1>
+  <form>
+    <h1>Signup</h1>
     <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name"   required>
+      <p>
+        <label>Firstname</label>
+        <input matInput id="firstname" type="text" name="firstname" class="form-control" [(ngModel)]="firstname" required>
+      </p>
+      <p>
+        <label>Lastname</label>
+        <input matInput id="lastname" type="lastname" name="lastname" class="form-control" [(ngModel)]="lastname" required>
+      </p>
+      <p>
+      <label>Email</label>
+      <input matInput id="email" type="email" name="email" class="form-control" [(ngModel)]="email" required>
+    </p>
+      <p>
+        <label>Username</label>
+        <input matInput id="username" type="username" name="username" class="form-control" [(ngModel)]="username" required>
+      </p>
+      <p>
+        <label>Password</label>
+        <input matInput id="password" type="password" name="password" class="form-control" [(ngModel)]="password" required>
+      </p>
+      <p>
     </div>
-    <div class="form-group">
-      <label for="surname">Surname</label>
-      <input type="text" id="surname"   required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email"  required>
-    </div>
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" id="username"  required>
-    </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" id="password"  required>
-    </div>
-    <button type="submit" class="btn btn-primary" >Sign up</button>
+    <button (click)="signup()" type="submit" class="btn btn-primary" >Signup</button>
+    <a [routerLink]="['/signup']" >Don't have a account Sign up</a>
+
   </form>
 </div>
 <app-footer></app-footer>
