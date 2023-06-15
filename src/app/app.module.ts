@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,6 @@ import { ModelsignupComponent } from './features/modelsignup/modelsignup.compone
 import { ServicesComponent } from './features/services/services.component';
 import { SignupComponent } from './features/signup/signup.component';
 import { AboutusComponent } from './features/aboutus/aboutus.component';
-
 import { AppointmentService } from './services/bookappointment.service';
 import { ModelSignupService } from './services/modelsignup.service';
 import { NewsletterService } from './services/newsletter.service';
@@ -27,7 +26,8 @@ import { LoginService } from './services/login.service';
 import { SignupService } from './services/signup.service';
 import { ReviewService } from './services/review.service';
 import { AdminComponent } from './features/admin/admin.component';
-
+import {LoginComponent} from "./login/login.component";
+import {AuthInterceptor} from "./auth/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -43,16 +43,16 @@ import { AdminComponent } from './features/admin/admin.component';
     ReviewPopupComponent,
     FooterComponent,
     StylistComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [AppointmentService, ModelSignupService, NewsletterService, SignupService,UserService, LoginService, ReviewService],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, AppointmentService, ModelSignupService, NewsletterService, SignupService,UserService, LoginService, ReviewService],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }

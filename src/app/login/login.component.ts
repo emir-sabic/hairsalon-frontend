@@ -1,25 +1,21 @@
-import { Component,OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import {LoginService} from "../../services/login.service";
-import {Login} from "../../models/Login.model";
-import {Route} from "../constants/route.enum";
-import {AuthService} from '../../auth/auth.service';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../auth/auth.service';
 import jwtDecode, {JwtPayload} from 'jwt-decode';
 
 @Component({
-  selector: 'app-loginsingup',
-  templateUrl: './loginsingup.component.html',
-  styleUrls: ['./loginsingup.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
-export class LoginsingupComponent{
+export class LoginComponent {
 
-  username: string = '';
-  password: string = '';
-  errorMessage: string = '';
+    username: string = "";
+    password: string = "";
+    message: string = "";
 
-  constructor( private loginService: LoginService, private authService: AuthService, private router: Router) {
-  }
-
+    constructor(private authService: AuthService, private router: Router) {
+    }
 
 public login(): void {
         sessionStorage.removeItem("app.token");

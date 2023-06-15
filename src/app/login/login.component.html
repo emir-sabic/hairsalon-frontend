@@ -1,0 +1,19 @@
+<h1>Login</h1>
+
+<form (ngSubmit)="login()" class="form-horizontal" #loginForm="ngForm">
+  <p>
+    <label>Username</label>
+    <input matInput id="username" type="text" name="username" class="form-control" [(ngModel)]="username" required>
+  </p>
+  <p>
+
+    <label>Password</label>
+    <input matInput id="password" type="password" name="password" class="form-control" [(ngModel)]="password" required>
+
+  </p>
+  <p>
+    <button mat-raised-button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+  </p>
+</form>
+
+<p>{{message}}</p>
