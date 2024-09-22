@@ -98,3 +98,4 @@ We are grateful for the valuable insights and inspiration provided by these reso
 For any inquiries or support related to the hair salon website, please contact:
  
 belmirr_zahirovic@live.com
+sabice85@gmail.com
