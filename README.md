@@ -80,34 +80,21 @@ If you would like to contribute to the hair salon website, please follow these g
 
 All contributions are welcome and greatly appreciated!
 
-## License
-
-[Insert License information]
-
-Please refer to the [LICENSE](link_to_license_file) file for detailed license information.
-
 ## Authors
 
 The hair salon website is developed by the following contributors:
 
-1. [Author 1]
-2. [Author 2]
-3. [Author 3]
+1. Belmir Zahirović
+2. Emir Šabić
+3. Dino Klačar
 
 Please feel free to contact any of the authors if you have questions or need further assistance.
 
-## Acknowledgements
-
-The hair salon website acknowledges the following resources and references:
-
-1. [Resource 1]
-2. [Resource 2]
-3. [Resource 3]
 
 We are grateful for the valuable insights and inspiration provided by these resources.
 
 ## Contact
 
 For any inquiries or support related to the hair salon website, please contact:
-
-[Contact Information]
+ 
+belmirr_zahirovic@live.com
